@@ -41,7 +41,9 @@
   },
   "homepage": "https://github.com/beezy12/retailstore#readme",
   "dependencies": {
+    "express": "^4.13.4",
+    "mongoose": "^4.4.11",
     "underscore": "^1.8.3",
-    "mongod": "2.0.35"
+    "mongodb": "2.0.35"
   }
 }
