@@ -18,17 +18,32 @@ mongodb.MongoClient.connect(uri, function(error, db) {
         process.exit(1)
     }
 
-    db.collection('sample').insert({ x: 1 }, function(error, result) {
+    const movieDoc = {
+        title: 'Jaws',
+        year: 1975,
+        director: 'Steven Spielberg',
+        rating: 'PG',
+        review: {
+            critics: 80,
+            audience: 96
+        },
+        screenplay: ['Big Dan', 'Ol Carl Gottlieb']
+    }
+
+    db.collection('movies').insert(movieDoc, function(error, result) {
         if(error) {
             console.log(error)
             process.exit(1)
         }
-
-        db.collection('sample').find().toArray(function(error, docs) {
-            if(error) {
-                console.log(error)
-                process.exit(1)
-            }
+        // returns all audience ratings that are greater than 90
+        // mongo would return a cursor instead of an array, which is why we use the toArray method
+        db.collection('movies')
+            .find({'review.audience': {'$gte': 90}})
+            .toArray(function(error, docs) {
+                if(error) {
+                    console.log(error)
+                    process.exit(1)
+                }
 
             console.log('Found these docs: ')
             docs.forEach(function(doc) {
