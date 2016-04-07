@@ -1,0 +1,47 @@
+{
+  "name": "retailstore",
+  "version": "1.0.0",
+  "description": "a mongo DB university course I did where we built an online retail store that allows users to search for computers online, add them to their own shopping cart, and checkout using a fake credit card number.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beezy12/retailstore.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "mocha": true,
+      "node": true,
+      "es6": true,
+      "browser": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+      "res": true,
+      "app": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 0,
+      "no-undef": 0,
+      "no-extra-semi": 0,
+      "no-redeclare": 0,
+      "comma-dangle": 0,
+      "no-mixed-spaces-and-tabs": 0,
+      "no-extra-boolean-cast": 0,
+      "no-empty": 0
+    }
+  },
+  "author": "Brian Stumbaugh <brian.stumbaugh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beezy12/retailstore/issues"
+  },
+  "homepage": "https://github.com/beezy12/retailstore#readme",
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "mongod": "2.0.35"
+  }
+}
