@@ -4,7 +4,9 @@
   "description": "a mongo DB university course I did where we built an online retail store that allows users to search for computers online, add them to their own shopping cart, and checkout using a fake credit card number.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test.js",
+    "watch": "gulp watch"
+
   },
   "repository": {
     "type": "git",
@@ -42,8 +44,13 @@
   "homepage": "https://github.com/beezy12/retailstore#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "mongodb": "2.0.35",
     "mongoose": "^4.4.11",
-    "underscore": "^1.8.3",
-    "mongodb": "2.0.35"
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5"
   }
 }
